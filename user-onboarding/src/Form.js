@@ -20,6 +20,10 @@ export default function Form(props){
         e.preventDefault();
         submit();
     }
+    
+    const isDisabled = () =>{
+        return !values.email.trim() || !values.name.trim() || !values.password.trim() || !values.tof
+    }
 
 
 
@@ -82,7 +86,7 @@ export default function Form(props){
                         onChange={onChange}
                         />
                 </label>
-                <button disabled={disabled}>Submit</button>
+                <button disabled={isDisabled()}>Submit</button>
             </div>
 
         </form>

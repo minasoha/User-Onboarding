@@ -17,6 +17,17 @@ describe("User-Onboard App", () =>{
     })
 
 
+    it('the proper elemets are showing', () =>{
+        nameInput().should('exist');
+        emailInput().should('exist');
+        passwordInput().should('exist');
+        checkBox().should('exist');
+        submitBtn().should('exist');
+    })
+
+    
+
+
     
 
 })
